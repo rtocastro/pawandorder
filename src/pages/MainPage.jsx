@@ -1,23 +1,14 @@
 import React, { useState } from 'react';
+import ZipForm from '../components/ZipForm';
 
 
 
 export default function Mainpage() {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSubmitted(true);
-    };
 
     return (
         <>
-            <div>
-                <form onSubmit={handleSubmit}>
-
-                </form>
-                <button type="submit">Zip Submit</button>
-            </div>
-            this is the mainpage
+    <ZipForm />
         </>
 
 
