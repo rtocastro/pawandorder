@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from 'react';
+
+
 
 export default function Mainpage() {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSubmitted(true);
+    };
+
     return (
         <>
-this is the mainpage 
+            <div>
+                <form onSubmit={handleSubmit}>
+
+                </form>
+                <button type="submit">Zip Submit</button>
+            </div>
+            this is the mainpage
         </>
 
 
