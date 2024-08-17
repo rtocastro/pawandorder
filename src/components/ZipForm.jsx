@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-
-
 export default function ZipForm() {
 
     const [zipcode, setZipCode] = useState('');
@@ -16,13 +14,13 @@ export default function ZipForm() {
             <div>
                 <form onSubmit={handleSubmit}>
                     <label>
-                        <font color="white">
+                        <font color="white" className="zipsearch">
                             <strong>
-                                If called:
+                                Zip Code:
                             </strong>
                         </font>
                         <br />
-                        <input type="text" placeholder="Enter Zip Code" value={zipcode} onChange={(e) => setCallNumber(e.target.value)} />
+                        <input type="text" placeholder="Enter Zip Code" value={zipcode} onChange={(e) => setZipCode(e.target.value)} />
                     </label>
                     <br />
                     <br />
