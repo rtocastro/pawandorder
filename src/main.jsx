@@ -7,6 +7,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 import Entry from './pages/Entry.jsx'
 import MainPage from './pages/MainPage.jsx'
+import WeatherPage from './pages/WeatherPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/mainpage',
         element: <MainPage />,
+      },
+      {
+        path: '/WeatherPage',
+        element: <WeatherPage />,
       },
     ],
   },
