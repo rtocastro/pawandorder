@@ -54,8 +54,10 @@ export default function WeatherApp() {
                 id="city"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                placeholder="Enter city name"
+                placeholder="Enter City Name"
             />
+            <br />
+            <br />
             <button id="citySearch" onClick={start}>Search</button>
 
             <div className="card-body">
