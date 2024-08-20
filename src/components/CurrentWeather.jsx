@@ -16,6 +16,7 @@ export default function WeatherApp() {
                 document.getElementById("humid").textContent = `Humidity: ${data.main.humidity}`;
                 document.getElementById("wind").textContent = `Wind Speed: ${data.wind.speed} mph`;
                 document.getElementById("pettemp").textContent = `Concrete/Asphalt Temperature: ${data.main.temp + 20} F°`;
+                document.getElementById("grasstemp").textContent = `Concrete/Asphalt Temperature: ${data.main.temp + 10} F°`;
             });
 
     };
@@ -49,7 +50,8 @@ export default function WeatherApp() {
                 <p className="card-text" id="temp"></p>
                 <p className="card-text" id="humid"></p>
                 <p className="card-text" id="wind"></p>
-                <p className="card-text" id="pettemp"></p>
+               <strong><p className="card-text" id="pettemp"></p></strong>
+               <strong><p className="card-text" id="grasstemp"></p></strong>
             </div>
         </div>
     );
