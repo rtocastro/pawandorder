@@ -8,7 +8,6 @@ export default function Entry() {
         <>
             <Link to='./WeatherPage'><img src={pawprotectlogo} /></Link>
             <br />
-            <br />
             <Link to='./WeatherPage'><img src={enter} /></Link>
             
         </>
