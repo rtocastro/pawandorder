@@ -15,8 +15,8 @@ export default function WeatherApp() {
                 document.getElementById("temp").textContent = `Temperature: ${data.main.temp} F°`;
                 document.getElementById("humid").textContent = `Humidity: ${data.main.humidity}`;
                 document.getElementById("wind").textContent = `Wind Speed: ${data.wind.speed} mph`;
-                document.getElementById("pettemp").textContent = `Concrete/Asphalt Temperature: ${data.main.temp + 20} F°`;
-                document.getElementById("grasstemp").textContent = `Concrete/Asphalt Temperature: ${data.main.temp + 10} F°`;
+                document.getElementById("pettemp").textContent = `Day time Concrete/Asphalt Temperature: ${data.main.temp + 20} F°`;
+                document.getElementById("grasstemp").textContent = `Day time grass Temperature: ${data.main.temp + 10} F°`;
             });
 
     };
