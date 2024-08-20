@@ -5,7 +5,7 @@ import pawprotectlogo from '../assets/pawprotectlogo.png'
 export default function Entry() {
     return (
         <>
-            <Link to='./MainPage'><img src={pawprotectlogo} /></Link>
+            <Link to='./WeatherPage'><img src={pawprotectlogo} /></Link>
             <br />
             this is the entry page
         </>
