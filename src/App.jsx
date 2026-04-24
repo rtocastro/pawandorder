@@ -73,7 +73,7 @@ setError("Invalid ZIP code. Try something like 91401.");
         <div className="logo-badge">🐾</div>
 
         <p className="eyebrow">Paw Safety Weather Checker</p>
-        <h1>Paw & Order</h1>
+        <h1>Paw Protect</h1>
 
         <p className="tagline">
           Quick check before walkies. Protect the paws. Respect the laws. 🐾
@@ -83,7 +83,7 @@ setError("Invalid ZIP code. Try something like 91401.");
           <input
             value={zip}
             onChange={(e) => setZip(e.target.value)}
-            placeholder="Enter ZIP code (e.g. 91401)"
+            placeholder="Enter ZIP code (e.g. 91406)"
             required
           />
 
