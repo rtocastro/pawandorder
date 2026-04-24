@@ -1,42 +1,231 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #123f2b;
+  background: #fff7e8;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #fff7e8;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 32px 20px;
+  background: #fff7e8;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-card {
+  width: min(100%, 920px);
+  background: transparent;
+  border: none;
+  box-shadow: none;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.logo-badge {
+  width: 120px;
+  height: 86px;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 28px;
+  background: #fff1c7;
+  border: 4px solid #184d35;
+  font-size: 42px;
+  box-shadow: 0 8px 0 #184d35;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.eyebrow {
+  margin: 18px 0 8px;
+  color: #2f6b45;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 0.95;
+  color: #123f2b;
+}
+
+.tagline {
+  margin: 18px auto 28px;
+  max-width: 720px;
+  font-size: 1.2rem;
+  color: #1f2f29;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto 28px;
+  max-width: 640px;
+}
+
+.search-form input {
+  flex: 1;
+  border: 2px solid #d8d8d0;
+  border-radius: 999px;
+  padding: 18px 22px;
+  background: white;
+  color: #123f2b;
+  font-size: 1rem;
+}
+
+.search-form button {
+  border: 0;
+  border-radius: 999px;
+  padding: 18px 28px;
+  background: #2f6b45;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.result-card {
+  margin-top: 30px;
+  padding: 28px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 3px solid #b9d2a6;
+  box-shadow: 0 12px 30px rgba(47, 107, 69, 0.12);
+  text-align: left;
+}
+
+.result-top {
+  display: grid;
+  grid-template-columns: 160px 1fr 230px;
+  gap: 28px;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #deded4;
+}
+
+.dog-mascot {
+  font-size: 92px;
+  text-align: center;
+}
+
+.status-lockup {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.status-emoji {
+  width: 78px;
+  height: 78px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #58b45e;
+  color: white;
+  font-size: 36px;
+}
+
+.result-card h2 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  color: #123f2b;
+}
+
+.result-card p {
+  color: #1f2f29;
+}
+
+.weather-summary {
+  border-left: 2px solid #deded4;
+  padding-left: 28px;
+  text-align: center;
+}
+
+.location {
+  font-weight: 900;
+  color: #123f2b;
+}
+
+.big-temp {
+  font-size: 3.6rem;
+  font-weight: 900;
+  color: #123f2b;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.weather-grid div {
+  background: #f2f4e8;
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+}
+
+.weather-grid span {
+  display: block;
+  font-size: 0.78rem;
+  color: #123f2b;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.weather-grid strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.8rem;
+  color: #123f2b;
+}
+
+.tiny-tip {
+  margin-top: 24px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #f2f4e8;
+  border: 1px solid #dde6cf;
+  color: #123f2b;
+  text-align: center;
+}
+
+.error {
+  color: #b00020;
+  font-weight: 800;
+}
+
+@media (max-width: 760px) {
+  .search-form {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .result-top {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .status-lockup {
+    justify-content: center;
+    flex-direction: column;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .weather-summary {
+    border-left: 0;
+    border-top: 2px solid #deded4;
+    padding-left: 0;
+    padding-top: 20px;
+  }
 
-.read-the-docs {
-  color: #888;
+  .weather-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
