@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { getPawStatus } from "./utils/pawRisk";
 
 const getPawStatus = (temp) => {
   const pavementTemp = Math.round(temp + 20);
@@ -65,7 +66,14 @@ setError("Invalid ZIP code. Try something like 91401.");
   };
 
   const temp = weather?.main?.temp;
-  const status = temp ? getPawStatus(temp) : null;
+const status = weather
+  ? getPawStatus({
+      temp: weather.main.temp,
+      humidity: weather.main.humidity,
+      windMph: weather.wind.speed,
+      clouds: weather.clouds?.all ?? 50,
+    })
+  : null;
 
   return (
     <main className="app">
@@ -124,8 +132,8 @@ setError("Invalid ZIP code. Try something like 91401.");
               </div>
 
               <div>
-                <span>Estimated Pavement</span>
-                <strong>{Math.round(temp + 20)}°F</strong>
+                <span>Estimated Concrete</span>
+                <strong>{status.concreteTemp}°F</strong>
               </div>
 
               <div>
