@@ -2,34 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { getPawStatus } from "./utils/pawRisk";
 
-const getPawStatus = (temp) => {
-  const pavementTemp = Math.round(temp + 20);
 
-  if (pavementTemp >= 125) {
-    return {
-      level: "danger",
-      title: "Shoes recommended!",
-      message:
-        "That pavement may be too hot for paws. Try dog shoes, shade, grass, or a later walk.",
-    };
-  }
-
-  if (pavementTemp >= 105) {
-    return {
-      level: "caution",
-      title: "Use caution!",
-      message:
-        "The ground may be warming up. Test it with your hand before walking.",
-    };
-  }
-
-  return {
-    level: "safe",
-    title: "Paws look good!",
-    message:
-      "Conditions seem okay for your pup, but always check pavement with your hand first.",
-  };
-};
 
 function App() {
   const [zip, setZip] = useState("");
