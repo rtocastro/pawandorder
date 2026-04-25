@@ -71,17 +71,41 @@ export const getPawStatus = ({ temp, humidity, windMph, clouds }) => {
     };
   }
 
-  if (windChill <= 20) {
-    return {
-      level: "caution",
-      title: "Cold paw warning!",
-      concreteTemp,
-      feelsLike: Math.round(windChill),
-      message:
-        "It may be cold enough to bother sensitive paws. Consider shorter walks or dog shoes.",
-    };
-  }
+// Snow / freezing logic
+const isFreezing = temp <= 32;
 
+if (windChill <= 20) {
+  return {
+    level: "danger",
+    title: "Too cold for paws!",
+    concreteTemp,
+    feelsLike: Math.round(windChill),
+    message:
+      "Extreme cold can hurt your dog’s paws. Limit time outside or use booties.",
+  };
+}
+
+if (isFreezing) {
+  return {
+    level: "caution",
+    title: "Cold surface warning!",
+    concreteTemp,
+    feelsLike: Math.round(windChill),
+    message:
+      "Snow, ice, and salt may irritate paws. Consider dog shoes or wipe paws after walks.",
+  };
+}
+
+if (isSnowing) {
+  return {
+    level: "caution",
+    title: "Snowy conditions!",
+    concreteTemp,
+    feelsLike: Math.round(windChill),
+    message:
+      "Snow can build up in paws and ice melt chemicals may irritate them. Booties recommended.",
+  };
+}
   return {
     level: "safe",
     title: "Paws look good!",
