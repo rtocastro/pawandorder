@@ -45,6 +45,7 @@ const status = weather
       humidity: weather.main.humidity,
       windMph: weather.wind.speed,
       clouds: weather.clouds?.all ?? 50,
+      condition: weather.weather?.[0]?.main ?? "",
     })
   : null;
 
