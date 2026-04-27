@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { getPawStatus } from "./utils/pawRisk";
+import pawLogo from "./assets/paw-logo.png";
 
 
 
@@ -52,10 +53,9 @@ const status = weather
   return (
     <main className="app">
       <section className="hero-card">
-        <div className="logo-badge">🐾</div>
+   <img className="app-logo" src={pawLogo} alt="Paw & Order logo" />
 
         <p className="eyebrow">Paw Safety Weather Checker</p>
-        <h1>Paw Protect</h1>
 
         <p className="tagline">
           Quick check before walkies. Protect the paws. Respect the laws. 🐾
